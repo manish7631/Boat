@@ -47,7 +47,7 @@ export const SmartWatch = () => {
             setPagesize(1)
             async function getData() {
                 try {
-                    const arr = await axios.get(`http://localhost:8000/topwatch?page=${page}&pagesize=${pagesize}`)
+                    const arr = await axios.get(`http://localhost:5000/topwatch?page=${page}&pagesize=${pagesize}`)
                     setWatchData(arr.data)
                 } catch (err) {
                     console.log(err)
@@ -179,7 +179,7 @@ export const SmartWatch = () => {
 
             }} onClick={() => {
 
-                if (page > 0) {
+                if (page > 1) {
                     setPage(page - 1)
                 }
 
